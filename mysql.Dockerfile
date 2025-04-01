@@ -25,4 +25,5 @@ COPY ./cdk.json ./
 COPY ./scripts ./scripts
 COPY --from=cdk-runner /cdk-runner .
 COPY --from=build /src/rds/rds .
+VOLUME /appdata
 CMD [ "/app/cdk-runner" ]
